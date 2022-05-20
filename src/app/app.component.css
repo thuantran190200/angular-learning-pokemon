@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  background: #EBF5F0;
+    height: auto;
+    /* background: linear-gradient(to right, #4daf54, #3d8880); */
+    font-family: "Poppins";
+}
+
+h1{
+  color: red;
+}

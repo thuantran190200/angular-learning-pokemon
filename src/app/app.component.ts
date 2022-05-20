@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-learning';
+  name = 'Angular' + VERSION.major;
+  show = false;
+
+  user = {
+    name: 'Thuận',
+    lastName: 'Trần',
+    age: 20,
+  }
+
+  handler() {
+    console.log('clicked');
+  }
+
+  users =[]
+
+  //PokéAPI
+
 }
