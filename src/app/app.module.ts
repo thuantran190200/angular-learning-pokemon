@@ -9,10 +9,13 @@ import { HeaderComponent } from './component/header/header.component';
 
 import { PokeDetailComponent } from './component/poke-detail/poke-detail.component';
 import { MainComponent } from './component/main/main.component';
-import { HttpClientModule} from '@angular/common/http';
-import { ListPokemonsComponent } from './component/list-pokemons/list-pokemons.component'
+import { HttpClientModule } from '@angular/common/http';
+import { ListPokemonsComponent } from './component/list-pokemons/list-pokemons.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PokemonComponent } from './component/pokemon/pokemon.component';
+import { HomeComponent } from './home/home.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,7 @@ import { PokemonComponent } from './component/pokemon/pokemon.component';
     MainComponent,
     ListPokemonsComponent,
     PokemonComponent,
-
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,8 +33,10 @@ import { PokemonComponent } from './component/pokemon/pokemon.component';
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
+    InfiniteScrollModule,
+    NgxSpinnerModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

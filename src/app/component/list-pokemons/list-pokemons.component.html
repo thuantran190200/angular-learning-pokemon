@@ -3,7 +3,9 @@
     <app-pokemon [pokemon]="pokemon"></app-pokemon>
   </div>
 </div>
+<button (click)="TestLoadmore()">Load More</button>
 <pagination-controls (pageChange)="page= $event; pokemons = []; getPokemons()"></pagination-controls>
+
 <div class="quantityPokemon">
   <select name="" [(ngModel)]="quantityPokemon">
     <option value="">20</option>

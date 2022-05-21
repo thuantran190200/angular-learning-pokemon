@@ -25,6 +25,18 @@ export class ListPokemonsComponent implements OnInit {
       .subscribe((res: any) => {
         this.pokemons = res.results;
         this.totalPokemons = res.count;
+        console.log(res);
+      });
+  }
+  limit = 20;
+  TestLoadmore() {
+    console.log('ok');
+    this.apiService
+      .getPokemons((this.limit = this.limit + 10), (this.page - 1) * 20)
+      .subscribe((res: any) => {
+        this.pokemons = res.results;
+        this.totalPokemons = res.count;
+        console.log(res);
       });
   }
 }
