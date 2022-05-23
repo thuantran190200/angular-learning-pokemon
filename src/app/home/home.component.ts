@@ -36,26 +36,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  getpoke() {}
-
   loadMore() {
     console.log('ok');
     this.get20Pokemons(this.limit, (this.offset = this.offset + 10));
-    // this.limit = this.limit + 10;
-    // this.offset = this.offset + 10;
-
-    // this.apiService
-    //   .getPokemons(this.limit, this.offset)
-    //   .subscribe((res: any) => {
-    //     this.pokemons = res.results;
-    //     this.totalPokemons = res.count;
-    //   });
-    // this.apiService
-    //   .getPokemons((this.limit = this.limit + 10), (this.page - 1) * 20)
-    //   .subscribe((res: any) => {
-    //     this.pokemons = res.results;
-    //     this.totalPokemons = res.count;
-    //     console.log(res);
-    //   });
   }
 }
