@@ -19,7 +19,32 @@
 Age:{{user.age}}
 <button (click)="user.age = user.age +1">+</button> -->
 <app-header></app-header>
-<app-home></app-home>
+
 <!-- <app-list-pokemons></app-list-pokemons> -->
-<app-main></app-main>
+<!-- <app-main></app-main>
+<router-outlet></router-outlet> -->
+<nav>
+  <div class="nav">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="/">Trang chủ</a></li>
+        <li class="nav-item"><a routerLink="/listpokemons">Danh sách</a></li>
+        <li class="nav-item"><a routerLink="/test">Giới thiệu</a></li>
+        <li class="nav-item"><a href="">Tải ứng dụng</a></li>
+        <li class="nav-item"><a href="">Liên hệ</a></li>
+    </ul>
+    <ul class="nav-list">
+        <li><div class="input-group">
+          <div class="form-outline">
+            <input id="search-focus" type="search" id="form1" class="form-control" />
+            <label class="form-label" for="form1">Search</label>
+          </div>
+          <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div></li>
+    </ul>
+</div>
+</nav>
+<router-outlet></router-outlet>
+
 

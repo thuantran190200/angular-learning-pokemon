@@ -7,26 +7,18 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { HeaderComponent } from './component/header/header.component';
 
-import { PokeDetailComponent } from './component/poke-detail/poke-detail.component';
 import { MainComponent } from './component/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ListPokemonsComponent } from './component/list-pokemons/list-pokemons.component';
+
 import { NgxPaginationModule } from 'ngx-pagination';
-import { PokemonComponent } from './component/pokemon/pokemon.component';
-import { HomeComponent } from './home/home.component';
+
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { TestComponent } from './test/test.component';
+import { PokemonModule } from './pokemon/pokemon.module';
+import { HomeModule } from './home/home.module';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HelloComponent,
-    HeaderComponent,
-    PokeDetailComponent,
-    MainComponent,
-    ListPokemonsComponent,
-    PokemonComponent,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, HelloComponent, HeaderComponent, MainComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,6 +27,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgxPaginationModule,
     InfiniteScrollModule,
     NgxSpinnerModule,
+    PokemonModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
-
 @Component({
-  selector: 'app-list-pokemons',
-  templateUrl: './list-pokemons.component.html',
-  styleUrls: ['./list-pokemons.component.css'],
+  selector: 'app-listpokemons',
+  templateUrl: './listpokemons.component.html',
+  styleUrls: ['./listpokemons.component.css'],
 })
-export class ListPokemonsComponent implements OnInit {
+export class ListpokemonsComponent implements OnInit {
   pokemons: any[] = [];
   page = 1;
   totalPokemons: number = 0;
@@ -18,7 +17,6 @@ export class ListPokemonsComponent implements OnInit {
   ngOnInit(): void {
     this.getPokemons();
   }
-
   getPokemons() {
     this.apiService
       .getPokemons(20, (this.page - 1) * 20)

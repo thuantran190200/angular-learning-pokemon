@@ -1,8 +1,10 @@
 <h2>Hello home</h2>
 <div class="pokemon-grid">
-  <div class="box" *ngFor="let pokemon of pokemons | paginate: {itemsPerPage:20, currentPage: page, totalItems: totalPokemons}">
+  <div class="box" *ngFor="let pokemon of pokemons | paginate: {itemsPerPage:prePage, currentPage: page, totalItems: totalPokemons}">
     <app-pokemon [pokemon]="pokemon"></app-pokemon>
+
   </div>
 </div>
-<button class="button-loadmore" (click)="loadMore()">Load more</button>
+<button (click)="loadMore()">Load More</button>
+
 

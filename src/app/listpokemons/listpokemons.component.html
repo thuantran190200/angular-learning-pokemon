@@ -1,14 +1,15 @@
 <div class="pokemon-grid">
   <div class="box" *ngFor="let pokemon of pokemons | paginate: {itemsPerPage:10, currentPage: page, totalItems: totalPokemons}">
     <app-pokemon [pokemon]="pokemon"></app-pokemon>
+
   </div>
 </div>
 <button (click)="TestLoadmore()">Load More</button>
 <pagination-controls (pageChange)="page= $event; pokemons = []; getPokemons()"></pagination-controls>
 
-<div class="quantityPokemon">
+<!-- <div class="quantityPokemon">
   <select name="" [(ngModel)]="quantityPokemon">
     <option value="">20</option>
     <option *ngFor="let dep for quantity">{{dep.quantityPokemon}}</option>
   </select>
-</div>
+</div> -->

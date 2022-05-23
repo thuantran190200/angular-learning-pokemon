@@ -1,0 +1,12 @@
+img{
+  display: block;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: red;
+}
+a:hover{
+  text-decoration: none;
+  color: blue;
+}
