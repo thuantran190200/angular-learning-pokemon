@@ -15,6 +15,9 @@ export class ApiService {
       `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126`
     );
   }
+  getPokemon10() {
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=10`);
+  }
 
   get20Pokemons(offset: number) {
     return this.http.get(
